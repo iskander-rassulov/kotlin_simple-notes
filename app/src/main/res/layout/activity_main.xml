@@ -20,6 +20,6 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/todo" />
 
 </RelativeLayout>
