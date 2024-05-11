@@ -4,13 +4,23 @@
     android:layout_height="match_parent">
 
     <EditText
+        android:id="@+id/noteNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_note_name"
+        android:inputType="text"
+        android:layout_margin="16dp" />
+
+    <EditText
         android:id="@+id/noteEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/noteNameEditText"
         android:layout_margin="16dp"
         android:hint="@string/enter_note_here"
         android:gravity="start|top"
         android:minHeight="200dp" />
+
 
     <Button
         android:id="@+id/saveNoteButton"

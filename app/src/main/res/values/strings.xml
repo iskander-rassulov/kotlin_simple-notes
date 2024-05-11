@@ -8,4 +8,6 @@
     <string name="light">Light</string>
     <string name="dark">Dark</string>
     <string name="delete">Delete</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="enter_note_name">Enter note name</string>
 </resources>
