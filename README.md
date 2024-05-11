@@ -17,16 +17,11 @@ Simple Notes is an intuitive mobile application for Android, designed to emulate
 - **Supported Android Versions**: Android 6.0 (Marshmallow) and above.
 
 ## Screenshots
-Here are some screenshots of the app showcasing its functionality and design:
+Below are some screenshots of the app showcasing its functionality and design, arranged in a table format:
 
-![Note List](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/46639132-c7b7-4802-b6b8-fc648d11589f)
-*Viewing the list of notes*
-
-![Note Creation](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/0cfa4ce3-bb5b-4086-b427-700d86bd78f2)
-*Creating a new note*
-
-![Change Note](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/2fb1980a-8eba-4b76-80ff-acdce98f5767)
-*Detailed view of a note*
+| Creating a New Note | Viewing the List of Notes | Change Note |
+|---------------------|---------------------------|--------------------|
+| ![Note Creation](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/0cfa4ce3-bb5b-4086-b427-700d86bd78f2) | ![Note List](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/46639132-c7b7-4802-b6b8-fc648d11589f) | ![Change Note](https://github.com/iskander-rassulov/kotlin_simple-notes/assets/167358283/2fb1980a-8eba-4b76-80ff-acdce98f5767) |
 
 ## Usage
 To use the application, install it on an Android device supporting Android 6.0 or higher. Launch the app, and you can immediately start adding notes.
