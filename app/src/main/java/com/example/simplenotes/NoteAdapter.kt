@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
 class NoteAdapter(private var notes: List<Note>, private val onClick: (Note) -> Unit, private val onLongClick: (Note) -> Unit) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
@@ -30,8 +31,24 @@ class NoteAdapter(private var notes: List<Note>, private val onClick: (Note) -> 
 
     override fun getItemCount() = notes.size
 
-    fun updateNotes(notes: List<Note>) {
-        this.notes = notes
-        notifyDataSetChanged()
+    fun updateNotes(newNotes: List<Note>) {
+        val diffResult = DiffUtil.calculateDiff(object : DiffUtil.Callback() {
+            override fun getOldListSize() = notes.size
+            override fun getNewListSize() = newNotes.size
+
+            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return notes[oldItemPosition].id == newNotes[newItemPosition].id
+            }
+
+            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return notes[oldItemPosition] == newNotes[newItemPosition]
+            }
+        })
+
+        this.notes = newNotes
+        diffResult.dispatchUpdatesTo(this)
     }
+
+
+
 }

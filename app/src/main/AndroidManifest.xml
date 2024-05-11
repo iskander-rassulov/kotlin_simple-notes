@@ -19,10 +19,19 @@
             android:theme="@style/Theme.SimpleNotes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Добавление NoteActivity -->
+        <activity
+            android:name=".NoteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SimpleNotes" />
+        <!-- Добавление SettingsActivity -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SimpleNotes" />
     </application>
 
 </manifest>
