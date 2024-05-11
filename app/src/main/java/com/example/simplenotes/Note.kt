@@ -1,4 +1,6 @@
 package com.example.simplenotes
 
-class Note {
-}
+data class Note(
+    val id: Int,
+    var content: String
+)
