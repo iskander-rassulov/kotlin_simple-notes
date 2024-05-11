@@ -6,22 +6,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NoteAdapter(private var notes: List<Note>, private val onClick: (Note) -> Unit) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+class NoteAdapter(private var notes: List<Note>, private val onClick: (Note) -> Unit, private val onLongClick: (Note) -> Unit) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
-    class NoteViewHolder(itemView: View, val onClick: (Note) -> Unit) : RecyclerView.ViewHolder(itemView) {
+    class NoteViewHolder(itemView: View, val onClick: (Note) -> Unit, val onLongClick: (Note) -> Unit) : RecyclerView.ViewHolder(itemView) {
         private val noteTextView: TextView = itemView.findViewById(R.id.noteTextView)
 
         fun bind(note: Note) {
             noteTextView.text = note.content
-            itemView.setOnClickListener {
-                onClick(note)
-            }
+            itemView.setOnClickListener { onClick(note) }
+            itemView.setOnLongClickListener { onLongClick(note); true }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
-        return NoteViewHolder(view, onClick)
+        return NoteViewHolder(view, onClick, onLongClick)
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
